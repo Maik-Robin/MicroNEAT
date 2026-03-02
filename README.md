@@ -12,81 +12,41 @@ NEAT is a genetic algorithm for evolving artificial neural networks. This implem
 
 ## Features
 
-? **Fully functional NEAT algorithm** - Complete implementation of the NEAT paper  
-? **Multiple activation functions** - 7 built-in activation functions  
-? **Speciation with compatibility distance** - Automatic species formation  
-? **Structural and weight mutations** - Evolve network topology and weights  
-? **Crossover between genomes** - Sexual reproduction with innovation tracking  
-? **Elite preservation** - Keep best genomes across generations  
-? **Stagnation detection** - Automatic handling of stagnant species  
-? **Recurrent connections support** - Optional recurrent neural networks  
-? **Configurable bias modes** - Multiple bias handling strategies  
+- **Fully functional NEAT algorithm** - Complete implementation of the NEAT paper  
+- **Multiple activation functions** - 7 built-in activation functions  
+- **Speciation with compatibility distance** - Automatic species formation  
+- **Structural and weight mutations** - Evolve network topology and weights  
+- **Crossover between genomes** - Sexual reproduction with innovation tracking  
+- **Elite preservation** - Keep best genomes across generations  
+- **Stagnation detection** - Automatic handling of stagnant species  
+- **Recurrent connections support** - Optional recurrent neural networks  
+- **Configurable bias modes** - Multiple bias handling strategies  
 
 ## Project Structure
 
 ```
-ConsoleApp1/
-??? ActivationFunctions/     # Neural network activation functions
-?   ??? IActivationFunction.cs
-?   ??? Sigmoid.cs
-?   ??? Tanh.cs
-?   ??? ReLU.cs
-?   ??? LeakyReLU.cs
-?   ??? Gaussian.cs
-?   ??? NEATSigmoid.cs
-?   ??? SELU.cs
-??? Algorithm/               # Main NEAT algorithm
-?   ??? NEATAlgorithm.cs
-??? Config/                  # Configuration settings
-?   ??? NEATConfig.cs
-?   ??? NEATConfigExtensions.cs
-??? Core/
-?   ??? Genome/             # Genome representation and operations
-?   ?   ??? Genome.cs
-?   ?   ??? GenomeBuilder.cs
-?   ?   ??? Genes/          # Node and connection genes
-?   ?       ??? NodeGene/
-?   ?       ?   ??? NodeType.cs
-?   ?       ?   ??? NodeGene.cs
-?   ?       ?   ??? InputNode.cs
-?   ?       ?   ??? OutputNode.cs
-?   ?       ?   ??? HiddenNode.cs
-?   ?       ?   ??? BiasNode.cs
-?   ?       ??? ConnectionGene/
-?   ?       ?   ??? ConnectionGene.cs
-?   ?       ??? GeneticEncoding/
-?   ?           ??? GeneticEncoding.cs
-?   ?           ??? NodeGeneData.cs
-?   ?           ??? ConnectionGeneData.cs
-?   ??? Population/         # Population and species management
-?       ??? Population.cs
-?       ??? Species.cs
-??? FitnessFunctions/       # Fitness evaluation functions
-?   ??? IFitnessFunction.cs
-?   ??? XOR.cs
-??? Util/                   # Utilities and trackers
-?   ??? StaticManager.cs
-?   ??? Trackers/
-?       ??? GenomeTracker.cs
-?       ??? NodeTracker.cs
-?       ??? InnovationTracker.cs
-?       ??? PopulationTracker.cs
-?       ??? ConfigTracker.cs
-??? WeightInitialization/   # Weight initialization strategies
-?   ??? IWeightInitialization.cs
-?   ??? RandomWeightInitialization.cs
-??? Examples/               # Example implementations
-    ??? XORExample.cs
-    ??? QuickXORTest.cs
+MicroNEAT/
+- ActivationFunctions       # Neural network activation functions
+- Algorithm                 # Main NEAT algorithm
+- Config                    # Configuration settings
+- Core                      # Genome representation and operations & Population and species management
+- FitnessFunctions          # Fitness evaluation functions
+- Util                      # Utilities and trackers
+- WeightInitialization      # Weight initialization strategies
+
+MicroNEAT/Examples          # Example usage of the NEAT algorithm
+
+MicroNEAT/Tests             # Unit tests for various components
 ```
+
 
 ## Quick Start
 
 ```csharp
-using ConsoleApp1.Algorithm;
-using ConsoleApp1.Config;
-using ConsoleApp1.ActivationFunctions;
-using ConsoleApp1.FitnessFunctions;
+using MicroNEAT.Algorithm;
+using MicroNEAT.Config;
+using MicroNEAT.ActivationFunctions;
+using MicroNEAT.FitnessFunctions;
 
 // Create configuration
 var config = new NEATConfig
@@ -199,7 +159,7 @@ config.FitnessFunction = new MyCustomFitness();
 Implement the `IActivationFunction` interface:
 
 ```csharp
-using ConsoleApp1.ActivationFunctions;
+using MicroNEAT.ActivationFunctions;
 
 public class CustomActivation : IActivationFunction
 {
@@ -310,10 +270,5 @@ If target fitness is not reached:
 
 ## Credits
 
-This is a C# port of the [NEAT-JavaScript](https://github.com/joshuadam/NEAT-JavaScript) project by Joshua Adam.
-
 Original NEAT algorithm by Kenneth O. Stanley: [Evolving Neural Networks through Augmenting Topologies](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
 
-## License
-
-This is a port of the NEAT-JavaScript project. Please refer to the original repository for licensing information.
