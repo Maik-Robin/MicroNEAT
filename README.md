@@ -18,7 +18,7 @@ NEAT is a genetic algorithm for evolving artificial neural networks. This implem
 - **Multiple activation functions** - 7 built-in activation functions  
 - **Speciation with compatibility distance** - Automatic species formation  
 - **Structural and weight mutations** - Evolve network topology and weights  
-- **Crossover between genomes** - Sexual reproduction with innovation tracking  
+- **Crossover between genomes** - Reproduction with innovation tracking  
 - **Elite preservation** - Keep best genomes across generations  
 - **Stagnation detection** - Automatic handling of stagnant species  
 - **Recurrent connections support** - Optional recurrent neural networks  
