@@ -1,7 +1,5 @@
 # NEAT-CSharp
 
-A C# port of the NEAT (NeuroEvolution of Augmenting Topologies) algorithm, originally from [NEAT-JavaScript](https://github.com/joshuadam/NEAT-JavaScript).
-
 ## Overview
 
 NEAT is a genetic algorithm for evolving artificial neural networks. This implementation includes:
