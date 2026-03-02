@@ -128,8 +128,8 @@ var config = new NEATConfig()
 Implement the `IFitnessFunction` interface:
 
 ```csharp
-using ConsoleApp1.FitnessFunctions;
-using ConsoleApp1.Core.Genome;
+using MicroNEAT.FitnessFunctions;
+using MicroNEAT.Core.Genome;
 
 public class MyCustomFitness : IFitnessFunction
 {
