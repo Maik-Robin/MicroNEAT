@@ -1,4 +1,6 @@
-# NEAT-CSharp
+# MicroNEAT
+
+MicroNEAT: A minimal, efficient C# library for evolving neural network topologies. Genetic algorithms meet .NET.
 
 ## Overview
 
